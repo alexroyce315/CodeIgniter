@@ -22,7 +22,8 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = '//'.$_SERVER['HTTP_HOST'];
+$config['static_url'] = $config['base_url'];
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -65,7 +66,7 @@ $config['uri_protocol']	= 'AUTO';
 | http://codeigniter.com/user_guide/general/urls.html
 */
 
-$config['url_suffix'] = '';
+$config['url_suffix'] = '.html';
 
 /*
 |--------------------------------------------------------------------------
@@ -364,6 +365,19 @@ $config['rewrite_short_tags'] = FALSE;
 |
 */
 $config['proxy_ips'] = '';
+
+
+/*
+|--------------------------------------------------------------------------
+| Modules locations
+|--------------------------------------------------------------------------
+|
+| These are the folders where your modules are located. You may define an
+| absolute path to the location or a relative path starting from the root
+| directory.
+|
+*/
+$config['modules_locations'] = array(APPPATH . 'modules/');
 
 
 /* End of file config.php */
